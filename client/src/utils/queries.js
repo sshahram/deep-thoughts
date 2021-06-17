@@ -56,3 +56,47 @@ export const QUERY_USER = gql`
         }
     }
 `;
+
+// get personalized data for "profile" page of logged in users
+export const QUERY_ME = gql`
+    {
+        me {
+            _id
+            username
+            email
+            friendCount
+            thoughts {
+                _id
+                thoughtText
+                createdAt
+                reactionCount
+                reactions {
+                    _id
+                    createdAt
+                    reactionBody
+                    username
+                }
+            }
+            friends {
+                _id
+                username
+            }
+        }
+    }
+`;
+
+// get personalized data for "homepage" of logged in users
+export const QUERY_ME_BASIC = gql`
+    {
+        me {
+            _id
+            username
+            email
+            friendCount
+            friends {
+                _id
+                username
+            }
+        }
+    }
+`;
