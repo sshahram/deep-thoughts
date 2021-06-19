@@ -23,7 +23,7 @@ const ReactionForm = ({ thoughtId }) => {
 
         try {
             await addReaction({
-                variables: { reactionBody, _id: thoughtId }
+                variables: { reactionBody, thoughtId: thoughtId}
             });
             console.log(thoughtId);
             // clear form value
