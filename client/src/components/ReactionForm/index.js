@@ -25,7 +25,7 @@ const ReactionForm = ({ thoughtId }) => {
             await addReaction({
                 variables: { reactionBody, thoughtId: thoughtId}
             });
-            console.log(thoughtId);
+            // console.log(thoughtId);
             // clear form value
             setBody('');
             setCharacterCount(0);

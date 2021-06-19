@@ -71,7 +71,7 @@ const resolvers = {
                     { $push: {thoughts: thought._id }},
                     { new: true }
                 );
-                console.log(thought);
+                // console.log(thought);
                 return thought;
             }
 
